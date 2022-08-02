@@ -1,806 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<title>Priya Chaurasiya</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#1e2327" />
-<!-- iOS Safari -->
-<meta name="apple-mobile-web-app-status-bar-style" content="#404040">
-<meta name="referrer" content="origin">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
-<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/my_website.css">
-<link rel="icon" type="image/x-icon" href="images/personal-website-logo.webp" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/index.js"></script>
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Montserrat", sans-serif
-    }
+<head>
 
-    .w3-row-padding img {
-        margin-bottom: 12px
-    }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    .bgimg {
-        background-size: cover;
-        min-height: 100%;
-    }
+    <title>Clean Blog</title>
 
-    a {
-        text-decoration: none;
-    }
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    .description {
-        color: #404040;
-    }
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
 
-    #network {
-        height: 100%;
-        position: fixed;
-        width: 30%;
-        background: linear-gradient(to bottom right, rgba(200, 200, 200, 0), rgba(255, 255, 255, 0));
-        /* Modify this to add color */
-    }
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    input:focus {
-        outline: none !important;
-        border: 1px solid gray;
-        box-shadow: 0 0 10px #CCCCCC;
-    }
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    textarea:focus {
-        outline: none !important;
-        border: 1px solid gray;
-        box-shadow: 0 0 10px #CCCCCC;
-    }
-
-    .bottom-shadow {
-        box-shadow: 20px 0 10px #CCCCCC;
-    }
-</style>
+</head>
 
 <body>
 
-    <!-- Sidebar with image -->
-    <nav class="w3-sidebar w3-hide-medium w3-hide-small w3-animate-opacity" style="width:30%;">
-        <div class="w3-display-container bgimg">
-            <canvas id="network"></canvas>
-            <div class="w3-container w3-display-topmiddle" style="margin-top: 40px">
-                <img src="images/Priya.jpeg" alt="Priya" style="width:100%;box-shadow: 5px 5px 20px #BBBBBB ;"
-                    class="w3-circle">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
             </div>
-            <div class="w3-display-middle" style="margin-top: 16%;">
-                <div class="w3-bar-block w3-center">
-                    <a href="#home"
-                        class="w3-bar-item w3-button w3-text-dark-gray w3-round-large w3-hover-opacity w3-hover-black">Home</a>
-                    <a href="#projects"
-                        class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Projects</a>
-                    <a href="#blog"
-                        class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Blog</a>
-                   
-                    <!-- <a href="#publications"
-                        class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Publications</a> -->
-                    <a href="#contact"
-                        class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Contact</a>
-                </div>
-            </div>
-            <div class="w3-container w3-display-bottommiddle" style="width: 50%; margin-bottom: 9%">
-                <!-- <h3 class="w3-center" style="color:black; font-family: Satisfy">Priya Chaurasiya</h3> -->
-                <div class="w3-row-padding">
-                    <div class="w3-quarter">
-                        <a href="https://github.com/Priya-38"><i
-                                class="fa fa-github w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                    </div>
-                    <div class="w3-quarter">
-                        <a href="https://www.linkedin.com/in/priya38/"><i
-                                class="fa fa-linkedin w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                    </div>
-                    <div class="w3-quarter">
-                        <a href="https://twitter.com/Priya_38"><i
-                                class="fa fa-twitter w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                    </div>
 
-                </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="post.html">Sample Post</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <div class="w3-display-bottommiddle"
-                    style="font-size: 13px; margin-left:7%; width: 60%; margin-bottom: 2%"><br />Copyright &#169; 2017
-                    Priya Chaurasiya</div>
-            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
 
-    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-    <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
-        style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-        <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
-            style="padding:0 12px;">
-            <i class="fa fa-remove"></i>
-        </a>
-        <div class="w3-bar-block w3-center">
-            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-            <a href="#blog" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Blog</a>
-            <a href="#projects" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
-                onclick="closeNav()">Projects</a>
-            <a href="#publications" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
-                onclick="closeNav()">Publications</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
-                onclick="closeNav()">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div id="#home" class="w3-main w3-padding-large" style="margin-left:30%;">
-
-        <!-- Navbar for large screens -->
-        <div class="w3-top w3-hide-small w3-hide-medium">
-            <div class="w3-bar" id="myNavbar">
-                <a href="#home" class="w3-bar-item w3-button w3-xlarge" style="margin-left:27%;"><span
-                        style="color:black; font-family: Satisfy">Priya Chaurasiya</span></a>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Clean Blog</h1>
+                        <hr class="small">
+                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </header>
 
-
-        <!-- Navbar for small and medium screens -->
-        <div class="w3-top w3-hide-large">
-            <div class="w3-bar w3-hide-large" id="mySmallNavbar">
-                <a href="#home" class="w3-bar-item w3-button w3-xlarge" style="margin-left:16%;"><span
-                        style="color:black; font-family: Satisfy">Priya Chaurasiya</span></a>
-            </div>
-        </div>
-
-        <!-- Menu icon to open sidebar -->
-        <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black w3-hide-large"
-            style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-        <!-- Header -->
-        <header class="w3-container w3-animate-opacity" style="padding:128px 16px" id="home">
-
-            <p class="typing-effect w3-jumbo w3-hide-small w3-hide-medium"
-                style="font-family: 'Source Code Pro', monospace;">
-                Hey, This is Priya!
-            </p>
-
-            <p class="w3-large w3-hide-small w3-hide-medium description"
-                style="margin-top:-100px; padding-left: 65px; font-family: 'Source Code Pro', monospace;">
-                I'm Priya, a final year B.Tech student at NIET, Greater Noida, interested in AI and it's impact on
-                our lives.
-            </p>
-
-            <img src="images/Me%20_2.jpg" alt="boss" class="w3-image w3-hide-large w3-hide-small w3-circle"
-                style="display:block;width:60%;margin:auto;box-shadow: 5px 5px 20px #BBBBBB;">
-            <img src="images/Me%20_2.jpg" alt="boss" class="w3-image w3-hide-large w3-hide-medium w3-circle"
-                width="1000" height="1333" style="box-shadow: 5px 5px 20px #BBBBBB; width:60%; margin-left: 20%;">
-
-            <!-- About Small amd medium screen -->
-            <p class="w3-large w3-hide-large w3-center description"
-                style="padding-left: 5%; margin-top: 10%; font-family: 'Source Code Pro', monospace;">
-                I'm Priya, a final year B.Tech student at NIET, Greater Noida, interested in AI and it's impact on our
-                lives.
-            </p>
-
-
-            <span class="w3-hide-large w3-hide-medium">
-                <br>
-                <br>
-            </span>
-
-            <div class="w3-center w3-hide-small w3-hide-medium" style="margin-top: 12%;">
-                <button class="w3-button w3-light-grey w3-padding-large w3-round-large">
-                    <a href="https://drive.google.com/file/d/1VWFiWDwco9GdfgA_T6K3jHy21EIuL077/view?usp=sharing"><i class="fa fa-download"></i> Download Resume</a>
-                </button>
-            </div>
-
-            <div class="w3-center w3-hide-large" style="margin-top: 12%; margin-left: 10%">
-                <button class="w3-button w3-light-grey w3-padding-large w3-round-large">
-                    <a href="https://drive.google.com/file/d/1VWFiWDwco9GdfgA_T6K3jHy21EIuL077/view?usp=sharing"><i class="fa fa-download"></i> Download Resume</a>
-                </button>
-            </div>
-
-            <!-- Down Button -->
-            <a href="#blog" class="w3-hide-medium">
-                <div class="w3-container" style="margin-left: 47%; margin-top: 13%">
-                    <div class="chevron"></div>
-                    <div class="chevron"></div>
-                    <div class="chevron"></div>
-                </div>
-            </a>
-
-        </header>
-
-         <!-- Projects -->
-         <div class="w3-content w3-justify w3-padding-32" id="projects">
-            <h2><i class="fa fa-flask fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"
-                    style="margin:0 -20px"></i>Projects</h2>
-            <hr>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Black-Friday-Sales-Prediction" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Black Friday Sales Prediction</h2>
-                        <p class="description">
-                            <ul>
-                                <li>Predicting the amount spend by the customers during the sale of Black Friday
-                                    following all the steps of a data science lifecycle.
-                                </li>
-                                <li>Also built a web app using the Flask micro-framework and deployed using Heroku.
-
-                                </li>
-                                <li>Predicting Customer behavior, can impact the decisions taken for the growth of
-                                    any organization.
-                                    Using such models, can increase the customer retention and customer
-                                    satisfaction.
-
-                                </li>
-                            </ul>
-
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/E-commerce-shipping-prediction" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">E-commerce-shipping-prediction</h2>
-                        <p class="description">
-                            <ul>
-                                <li>Built an End-to-End Web App using Data Science & Machine Learning for an
-                                    International E-commerce Company to predict whether their products will reach on
-                                    committed Delivery Time or not.</li>
-                                <li>Collected the dataset from Kaggle.</li>
-                                <li> Preprocessed the data well and built an ML model by tuning the Hyperparameters of
-                                    RandomForest Classifier using RandomizedSearchCV.</li>
-                                <li> Saved the Best Performing model in a Pickle file.</li>
-                                <li>Built a Web App using Python at the Backend with Flask API and HTML & Bootstrap
-                                    serving at the Frontend.</li>
-                                <li> Deployed the Web App on Heroku Cloud.</li>
-                                <li>The Web App receives the data from the User Input, makes predictions with the saved
-                                    ML model and sends a Prediction text indicating whether the order will reach on time
-                                    or not.</li>
-                                <li>Using such models, can increase the customer retention and customer satisfaction.
-                                </li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/zomato-ratings-prediction" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Zomato ratings prediction!</h2>
-                        <p class="description">
-                            <ul>
-                                <li>Perform extensive Exploratory Data Analysis(EDA) on the Zomato Dataset.</li>
-                                <li>Build an appropriate Machine Learning Model that will help various Zomato
-                                    Restaurants to predict their respective Ratings based on certain features.</li>
-                                <li>DEPLOY the Machine learning model via Flask that can be used to make live
-                                    predictions of restaurants ratings.</li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-            <br>
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Flight-Fare-Prediction" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Flight Fare Prediction</h2>
-                        <p class="description">
-                            <ul>
-                                <li>In this project, we'll be analyzing the flight fare prediction using Machine
-                                    Learning dataset using essential exploratory data analysis techniques then will draw
-                                    some predictions about the price of the flight based on some features such as what
-                                    type of airline it is, what is the arrival time, what is the departure time, what is
-                                    the duration of the flight, source, destination and more.</li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-            <br>
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Fake-News-Detection-Using-Logistic-Regression" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Fake news detection</h2>
-                        <p class="description">
-                            <ul>
-                                <li>By practicing this python project of detecting fake news, you will easily make a
-                                    difference between real and fake news.</li>
-                                <li>This dataset has a shape of 20800x5.</li>
-                                <li>We ended up obtaining an accuracy of 97.48% in magnitude.</li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Credit-Card-Fraud-Detection" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Credit card fraud detection</h2>
-                        <p class="description">
-                            <ul>
-                                <li>The problem statement chosen for this project was to predict fraudulent credit card
-                                    transactions with the help of machine learning models.</li>
-                                <li>The dataset is taken from the Kaggle Website website and it has a total of 2,84,807
-                                    transactions, out of which 492 are fraudulent.</li>
-                                <li>The challenge in this project was that, it is highly imbalanced with only 0.17%
-                                    transactions to be fraudulent.</li>
-                                <li>The trained model got an accuracy of about 95%.</li>
-                                <li>Aim is to help the credit card companies to make them capable to recognize
-                                    fraudulent credit card transactions so, that customers are not charged for items
-                                    that they did not purchase.</li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Breast-Cancer-Classification-using-Machine-Learning"
-                        target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Breast cancer classification using Machine Learning
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Man must explore, and this is exploration at its greatest
                         </h2>
-                        <p class="description">
-                            <ul>
-                                <li>In this project, we'll see how can we build a Breast Cancer Classification system
-                                    using Machine Learning in Python.</li>
-                            </ul>
-                        </p>
+                        <h3 class="post-subtitle">
+                            Problems look mighty small from 150 miles up
+                        </h3>
                     </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
                 </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Diabetes_Prediction" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Diabetes Prediction</h2>
-                        <p class="description">
-                            <ul>
-                                <li>Objective is to predict whether the patient has diabetes or not based on various
-                                    features like Glucose level, Insulin, Age, BMI and various other features.</li>
-                                <li>The web app is developed to help people determining whether, they can be diabetic or
-                                    not in early stages. Early detection of diabetes can prevent the adverse effects of
-                                    it.</li>
-                                <li>Deployed the app using streamlit.
-                                </li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/TITANIC-SURVIVAL-PREDICTION-MODEL" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Titanic Survival Prediction</h2>
-                        <p class="description">
-                            <ul>
-                                <li>In this project, we're using a Logistic Regression.</li>
-                                <li>We will analyze the Titanic data set and make two predictions.</li>
-                                <li>One prediction to see which passengers on board the ship would survive and then
-                                    another prediction to see if we would’ve survived.</li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Movies-Recommendation-Engine" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Movies Movies-Recommendation-Engine</h2>
-                        <p class="description">
-                            <ul>
-                                <li>In this machine learning project, we build a recommendation system from the ground
-                                    up to suggest movies to the user based on his/her preferences.</li>
-                                <li>This dataset has a shape of 4803x24</li>
-                                <li>We built a content-based recommendation engine that makes recommendations given the
-                                    title of the movie as input.</li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Prediction-Using-Supervised-ML-GRIP-Task-1" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Prediction using Supervised ML
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
                         </h2>
-                        <p class="description">
-                            <ul>
-                                <li>Prediction Using Supervised ML In this task we have to predict the percentage score
-                                    of a student based on the number of hours studied.</li>
-                                <li>The task has 2 variables where the feature is no. of hours studied and target value
-                                    is the percentage score.</li>
-                                <li> This can be solved using Simple Linear Regression.</li>
-                            </ul>
-                        </p>
                     </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
                 </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://github.com/Priya-38/Wine-Quality-Prediction" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Wine quality prediction</h2>
-                        <p class="description">
-                            <ul>
-                                <li>In this project, we're predicting the wine quality using Machine Learning that can
-                                    predict the quality of the wine using some chemical parameters.</li>
-                                <li> We use the wine quality dataset from Kaggle.</li>
-                                <li>This dataset has the fundamental features which are responsible for affecting the
-                                    quality of the wine.</li>
-                                <li>By the use of several Machine learning models, we will predict the quality of the
-                                    wine to check further the quality of the wine i.e. is it good or bad. </li>
-                            </ul>
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <br>
-            <br>
-
-        <!-- Blog -->
-        <div class="w3-padding-32 w3-content" id="blog">
-            <h2><i class="fa fa-paper-plane w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"
-                    style="margin:0 -20px"></i>Blog</h2>
-            <hr class="w3-opacity">
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/how-do-the-customers-react-to-black-friday-sales-cb70a3ac4253"
-                        target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">How do the customers react to Black Friday Sales?
-                            <span style="float: right; font-size: 12px;">July 18th 2022</span>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Science has not yet mastered prophecy
                         </h2>
-                        <p class="description">In this blog, we're going to see how do the customers react to Black
-                            Friday Sale?
-                        </p>
+                        <h3 class="post-subtitle">
+                            We predict too much for the next year and yet far too little for the next ten.
+                        </h3>
                     </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
                 </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/diabetes-prediction-web-app-a3b5ac216c90" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Diabetes Prediction Web App!
-                            <span style="float: right; font-size: 12px;">February 5th 2022</span>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Failure is not an option
                         </h2>
-                        <p class="description">
-                            In this blog, I will explain my approach in machine learning to create a Web App to predict
-                            whether the person has Diabetes or not based on various features like Glucose level,
-                            Insulin, Age, BMI.
-                        </p>
+                        <h3 class="post-subtitle">
+                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                        </h3>
                     </a>
+                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
                 </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/exploratory-data-analysis-in-python-c7f1d8132586"
-                        target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Exploratory Data Analysis(EDA) in Python
-                            <span style="float: right; font-size: 12px;">April 10th 2022</span>
-                        </h2>
-                        <p class="description">
-                            This blog will help us to understand the data sets by summarizing their main characteristics
-                            often plotting them visually.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/credit-card-fraud-detection-8295e1a831a5" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Credit Card Fraud Detection
-                            <span style="float: right; font-size: 12px;">August 2nd 2022</span>
-                        </h2>
-                        <p class="description">
-                            From this blog we can see how Machine Learning help in detecting the Credit Card Frauds.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/10-techniques-to-deal-with-imbalanced-classes-in-machine-learning-e96d1d8dbb0a"
-                        target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">10 Techniques to deal with imbalanced classes in Machine
-                            Learning <span style="float: right; font-size: 12px;">March 10th 2022</span></h2>
-                        <p class="description">Get familiar with class imbalance.
-                            Understand various techniques to treat imbalanced classes.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/data-visualization-in-python-d510cfa8e52e" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Data Visualization in Python <span
-                                style="float: right; font-size: 12px;">April 3rd 2022</span></h2>
-                        <p class="description">This blog will help us to learn about Data Visualization.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/statistics-vs-data-science-425915b29931" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Statistics vs Data Science <span
-                                style="float: right; font-size: 12px;">February 22nd 2022</span></h2>
-                        <p class="description">Understanding how a Data Scientist’s thinking is different from a
-                            Statistician’s thinking.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/what-is-machine-learning-de964bbe7f02" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">What is Machine Learning?<span
-                                style="float: right; font-size: 12px;">February 14th 2022</span></h2>
-                        <p class="description">Understanding about Machine Learning.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/git-and-github-183fdfe36301" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Git and Github<span
-                                style="float: right; font-size: 12px;">February 12th 2022</span></h2>
-                        <p class="description">In this article, we'll learn about Git and Github.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/pandas-ab3efa8c93c9" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Pandas<span
-                                style="float: right; font-size: 12px;">February 5th 2022</span></h2>
-                        <p class="description">In this article, we'll learn about Pandas.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/numpy-901cea681a9d" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">Numpy<span
-                                style="float: right; font-size: 12px;">February 4th 2022</span></h2>
-                        <p class="description">In this article, we'll learn about Numpy.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/how-the-neural-network-works-997b69f2631e" target="_blank">
-                        <h2 class="w3-xlarge w3-text-dark-grey">How the Neural Network works?<span
-                                style="float: right; font-size: 12px;">February 2nd 2022</span></h2>
-                        <p class="description">In this article, I will explain how a neural network works.
-                        </p>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://medium.com/@priya38/what-is-data-science-61851af20a77" target="_blank">
-                    <h2 class="w3-xlarge w3-text-dark-grey">What is Data Science?<span
-                            style="float: right; font-size: 12px;">February 2nd 2022</span></h2>
-                    <p class="description">The importance of data science brings together the domain expertise from
-                        programming, mathematics, and statistics to create insights and make sense of data.
-                    </p>
-                </a>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts &rarr;</a>
+                    </li>
+                </ul>
             </div>
         </div>
-
-    </div>
-        
-
-       
-
-            <!-- Publications
-            <h2 class="w3-margin-top" style="margin:0 -20px" id="publications"><i
-                    class="fa fa-clipboard fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"></i>Publication
-            </h2>
-            <hr>
-            <div class="w3-container" style="margin:0 -30px">
-                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                    <a href="https://medium.com/@priya38/what-is-data-science-61851af20a77">
-                        <h2 class="w3-xlarge w3-text-dark-grey">What is Data Science?
-                        </h2>
-                        <p class="description">The importance of data science brings together the domain expertise from
-                            programming, mathematics, and statistics to create insights and make sense of data.</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <br> -->
-
-        <!-- Contact -->
-        <div class="w3-padding-32 w3-content" id="contact">
-            <h2 style="margin:0 -20px"><i
-                    class="fa fa-comments-o fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"></i>
-                Contact</h2>
-            <hr class="w3-opacity" />
-            <p class="w3-opacity w3-center"><i>Wanna Chat? Drop a note!</i></p>
-            <div class="w3-row w3-padding-32">
-
-                <div class="w3-col m6 w3-large w3-margin-bottom">
-                    <p>
-                        <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right" style="width:30px"></i>
-                        Delhi<br>
-                    </p>
-                    <p>
-                        <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" style="width:30px"> </i> Email:
-                        pchaurasiya925@gmail.com<br>
-                    </p>
-                </div>
-
-                <div class="w3-col m6">
-                    <p>
-                    <form action="https://formspree.io/f/mnqrabdl" target="_blank" method="POST">
-                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                            <div class="w3-half">
-                                <input class="w3-input w3-border" type="text" placeholder="Name" name="Name">
-                            </div>
-                            <div class="w3-half">
-                                <input class="w3-input w3-border" type="email" placeholder="Email" name="Email">
-                            </div>
-                        </div>
-                        <input class="w3-input w3-border" type="text" placeholder="Message*" name="Message" required>
-                        <button class="w3-section w3-button w3-light-grey w3-padding-large w3-round-large"
-                            type="submit">
-                            <i class="fa fa-send"></i> Send
-                        </button>
-                        <p class="w3-opacity w3-right">* Field is required. <br /> &nbsp So, yeah you can be
-                            anonymous.</p>
-                    </form>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div style="display:none;">
-            <a href="http://www.clustrmaps.com/map/Priya-38.github.io"
-                title="Visit tracker for Priya-38.github.io"><img
-                    src="//www.clustrmaps.com/map_v2.png?d=QLZXmB8gTUnBObSP0O2JoAd0cXaME8cM5-74QQePvnA" /></a>
-        </div>
-
-        <!-- Footer -->
-        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge"
-            style="margin:-24px; background: linear-gradient(to bottom right, #EEEEEE, #CCCCCC );">
-            <a href="https://github.com/Priya-38"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
-            <a href="https://www.linkedin.com/in/priya38/"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
-            <a href="https://twitter.com/Priya_38"><i class="fa fa-twitter w3-hover-opacity w3-xlarge"></i></a>
-            <!--<a href="https://www.facebook.com/priya.n"><i
-                    class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i></a>-->
-            <br>
-            <p class="w3-small">Copyright &#169; 2022 Priya Chaurasiya</p>
-<!--              End footer  -->
-        </footer>
-
-        <!-- END PAGE CONTENT -->
     </div>
 
+    <hr>
 
-    <script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        // Open and close sidebar
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "60%";
-            document.getElementById("mySidebar").style.display = "block";
-        }
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
 
-        function closeNav() {
-            document.getElementById("mySidebar").style.display = "none";
-        }
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        // Smooth Scroll
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
 
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 500, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-
-        // Change style of navbar on scroll
-        window.onscroll = function () { myFunction() };
-        function myFunction() {
-
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " bottom-shadow" + " w3-animate-top" + " w3-white";
-            } else {
-                navbar.className = navbar.className.replace(" bottom-shadow w3-animate-top w3-white", "");
-            }
-
-            var navbar = document.getElementById("mySmallNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " bottom-shadow" + " w3-animate-top" + " w3-white";
-            } else {
-                navbar.className = navbar.className.replace(" bottom-shadow w3-animate-top w3-white", "");
-            }
-
-        }
-
-    </script>
 </body>
 
 </html>
