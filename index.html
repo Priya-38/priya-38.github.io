@@ -32,7 +32,9 @@
     .w3-row-padding img {
         margin-bottom: 12px
     }
-
+    .w3-justify {
+    text-align: revert;
+    }
     .bgimg {
         background-size: cover;
         min-height: 100%;
@@ -69,6 +71,10 @@
     .bottom-shadow {
         box-shadow: 20px 0 10px #CCCCCC;
     }
+    #ul_top_hypers li {
+    float: left;
+}
+
 </style>
 
 <body>
@@ -85,6 +91,8 @@
                 <div class="w3-bar-block w3-center">
                     <a href="#home"
                         class="w3-bar-item w3-button w3-text-dark-gray w3-round-large w3-hover-opacity w3-hover-black">Home</a>
+                    <a href="#publications"
+                        class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Skills</a>
                     <a href="#projects"
                         class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Projects</a>
                     <a href="#blog"
@@ -100,18 +108,23 @@
                 <!-- <h3 class="w3-center" style="color:black; font-family: Satisfy">Priya Chaurasiya</h3> -->
                 <div class="w3-row-padding">
                     <div class="w3-quarter">
-                        <a href="https://github.com/Priya-38"><i
+                        <a href="https://github.com/Priya-38" target="_blank"><i
                                 class="fa fa-github w3-hover-opacity w3-xlarge w3-col s3"></i></a>
                     </div>
                     <div class="w3-quarter">
-                        <a href="https://www.linkedin.com/in/priya38/"><i
+                        <a href="https://www.linkedin.com/in/priya38/" target="_blank"><i
                                 class="fa fa-linkedin w3-hover-opacity w3-xlarge w3-col s3"></i></a>
                     </div>
                     <div class="w3-quarter">
-                        <a href="https://twitter.com/Priya_38"><i
+                        <a href="https://medium.com/@priya38" target="_blank"><i
+                                class="fa fa-medium w3-hover-opacity w3-xlarge w3-col s3"></i></a>
+                    </div>
+                    <div class="w3-quarter">
+                        <a href="https://twitter.com/Priya_38" target="_blank"><i
                                 class="fa fa-twitter w3-hover-opacity w3-xlarge w3-col s3"></i></a>
                     </div>
-
+                   
+                    
                 </div>
             </div>
             <div class="w3-display-bottommiddle"
@@ -129,11 +142,13 @@
         </a>
         <div class="w3-bar-block w3-center">
             <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+            <a href="#publications" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Publications</a>
             <a href="#blog" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Blog</a>
             <a href="#projects" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
                 onclick="closeNav()">Projects</a>
-            <a href="#publications" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
-                onclick="closeNav()">Publications</a>
+            <!-- <a href="#publications" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+                onclick="closeNav()">Publications</a> -->
             <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
                 onclick="closeNav()">Contact</a>
         </div>
@@ -208,7 +223,7 @@
             </div>
 
             <!-- Down Button -->
-            <a href="#blog" class="w3-hide-medium">
+            <a href="#publications" class="w3-hide-medium">
                 <div class="w3-container" style="margin-left: 47%; margin-top: 13%">
                     <div class="chevron"></div>
                     <div class="chevron"></div>
@@ -218,8 +233,36 @@
 
         </header>
 
+        <!-- skills -->
+        <div class="w3-content w3-padding-32" id="publications">
+            <h2><i class="fa fa-pencil-square-o fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"
+                    style="margin:0 -20px"></i>Skills</h2>
+            <hr>
+
+            <div class="w3-container" style="margin:0 -30px">
+                <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
+                        <p class="description">
+                            <ul>
+                                <li>Data Structures and Algorithms
+                                </li>
+                                <li>Machine Learning</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>Git and Github</li>
+                                <li>Statistics and Probability</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                            </ul>
+
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+
          <!-- Projects -->
-         <div class="w3-content w3-justify w3-padding-32" id="projects">
+         <div class="w3-content w3-padding-32" id="projects">
             <h2><i class="fa fa-flask fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"
                     style="margin:0 -20px"></i>Projects</h2>
             <hr>
@@ -728,9 +771,11 @@
         <!-- Footer -->
         <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge"
             style="margin:-24px; background: linear-gradient(to bottom right, #EEEEEE, #CCCCCC );">
-            <a href="https://github.com/Priya-38"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
-            <a href="https://www.linkedin.com/in/priya38/"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
-            <a href="https://twitter.com/Priya_38"><i class="fa fa-twitter w3-hover-opacity w3-xlarge"></i></a>
+            <a href="https://github.com/Priya-38" target="_blank"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
+            <a href="https://www.linkedin.com/in/priya38/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
+            <a href="https://medium.com/@priya38/" target="_blank"><i class="fa fa-medium w3-hover-opacity w3-xlarge"></i></a>
+            <a href="https://twitter.com/Priya_38" target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-xlarge"></i></a>
+            <a href="https://twitter.com/Priya_38" target="_blank"><i class="cib-leetcode"></i></a>
             <!--<a href="https://www.facebook.com/priya.n"><i
                     class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i></a>-->
             <br>
